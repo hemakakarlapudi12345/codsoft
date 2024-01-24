@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    double n1, n2, result;
+    char operation;
+    cout<<"Simple Calculator\n";
+    cout<<"Enter the first number: "<<endl;
+    cin>>n1;
+    cout<<"Enter the second number: "<<endl;
+    cin>>n2;
+    cout<<"Choose an operation (+,-,*,/): ";
+    cin>>operation;
+    switch(operation)
+    {
+        case '+':
+        result = n1+n2;
+        cout<<"Result: "<<result<<endl;
+        break;
+        case '-':
+        result = n1-n2;
+        cout<<"Result: "<<result<<endl;
+        break;
+        case '*':
+        result = n1*n2;
+        cout<<"Result: "<<result<<endl;
+        break;
+        case '/':
+        if(n2!=0)
+        {
+            result = n1/n2;
+            cout<<"Result: "<<result<<endl;
+        }
+        else
+        {
+            cout<<"Error! Division by zero is not possible"<<endl;
+        }
+        default:
+        cout<<"Error! Invalid operation."<<endl;
+    }
+    return 0;
+}
